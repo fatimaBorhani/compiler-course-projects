@@ -1,0 +1,20 @@
+module BaseModule begin
+    public int process(int val) begin
+        return val + 10;
+    end
+end
+
+module Main includes BaseModule begin
+    public void main() begin
+        mut int a = 5;
+        a = a * 2;
+
+        mut int result1 = this.process(a);
+
+        BaseModule base = BaseModule();
+        mut int result2 = base.process(a);
+
+        output result1;
+        output result2;
+    end
+end

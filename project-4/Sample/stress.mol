@@ -1,0 +1,77 @@
+struct Point begin
+    public int x;
+    public int y;
+
+    public void setX(int v) begin
+        this.x = v;
+    end
+
+    public int sum() begin
+        return this.x + this.y;
+    end
+end
+
+module Util begin
+    public int max(int a, int b) begin
+        if (a > b) begin
+            return a;
+        end else begin
+            return b;
+        end
+    end
+end
+
+module Main includes Util begin
+    private int counter;
+
+    public void bump() begin
+        this.counter = this.counter + 1;
+    end
+
+    public void main() begin
+        mut int i = 0;
+        mut int total = 0;
+        while (i < 5) begin
+            total = total + i;
+            i = i + 1;
+        end
+        output total;
+
+        for (mut int j = 0; j < 10; j = j + 1) begin
+            if (j == 3) begin
+                continue
+            end
+            if (j > 5) begin
+                break
+            end
+            output j;
+        end
+
+        Point p = Point();
+        p.setX(7);
+        p.y = 5;
+        output p.sum();
+
+        output this.max(3, 9);
+
+        mut bool flag = true and not false;
+        output flag;
+
+        mut double d = 2.5e0;
+        d = d * 2.0;
+        output d;
+
+        mut float f = 1.5;
+        output f;
+
+        mut char c = 'A';
+        output c;
+
+        this.bump();
+        this.bump();
+        output this.counter;
+
+        output -total;
+        output total >= 10 or false;
+    end
+end
