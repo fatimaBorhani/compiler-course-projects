@@ -1,0 +1,13 @@
+module MutabilityTest begin
+    public int calculateNewValue(int currentValue) begin
+        return currentValue + 10;
+    end
+end
+
+module Main includes MutabilityTest begin
+    public void main() begin
+        mut int counter = 5;
+        counter = this.calculateNewValue(counter);
+        output counter;
+    end
+end
