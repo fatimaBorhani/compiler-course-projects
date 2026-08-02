@@ -1,0 +1,27 @@
+# Build output
+bin/
+build/
+build_classes/
+out/
+codeGenOutput/
+*.class
+
+# ANTLR generated files
+gen/
+.antlr/
+*.tokens
+*.interp
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Python (stray venvs)
+.venv/
+venv/
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
