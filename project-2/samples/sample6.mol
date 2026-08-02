@@ -1,0 +1,35 @@
+module DataPacket begin
+    private int id;
+    private int payload;
+
+    public void init(int i, int p) begin
+        this.id = i;
+        this.payload = p;
+    end
+
+    public int getPayload() begin
+        return this.payload;
+    end
+
+    public void setPayload(int p) begin
+        this.payload = p;
+    end
+end
+
+module OwnershipTest begin
+    public DataPacket processPacket(mut DataPacket packet) begin
+        mut int currentVal;
+        currentVal = packet.getPayload();
+        packet.setPayload(currentVal * 2);
+        return packet;
+    end
+end
+
+module Main includes OwnershipTest begin
+    public void main() begin
+        mut DataPacket myPacket;
+        myPacket.init(1, 100);
+        myPacket = this.processPacket(myPacket);
+        output myPacket.getPayload();
+    end
+end

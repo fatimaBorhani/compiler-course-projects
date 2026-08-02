@@ -1,0 +1,20 @@
+module Math begin
+    public int factorial(int n) begin
+        mut int result = 1;
+        mut int i;
+
+        for (i = 1; i <= n; i = i + 1) begin
+            result = result * i;
+        end
+
+        return result;
+    end
+end
+
+module Main includes Math begin
+    public void main() begin
+        mut int f;
+        f = factorial(5);
+        output f;
+    end
+end

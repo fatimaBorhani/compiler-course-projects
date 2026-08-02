@@ -1,0 +1,11 @@
+program [modules:3 structs:1]
+        struct Point [fields:2]
+                field x float:public
+                field y float:public
+        module MathUtils [methods:2 fields:0]
+                method multiply (float*float -> float):public [statements:3]
+                method isPositive (float -> bool):public [statements:3]
+        module Geometry [methods:1 fields:0]
+                method processPoint (void -> void):public [statements:8]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:1]

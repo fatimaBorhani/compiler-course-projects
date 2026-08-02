@@ -1,0 +1,11 @@
+program [modules:3 structs:0]
+        module DataPacket [methods:3 fields:2]
+                field id int:private
+                field payload int:private
+                method init (int*int -> void):public [statements:2]
+                method getPayload (void -> int):public [statements:1]
+                method setPayload (int -> void):public [statements:1]
+        module OwnershipTest [methods:1 fields:0]
+                method processPacket (DataPacket -> DataPacket):public [statements:4]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:4]

@@ -1,0 +1,28 @@
+module Engine begin
+    public int power;
+
+    public void setPower(int p) begin
+        this.power = p;
+    end
+end
+
+module Car includes Engine begin
+    private int wheels;
+
+    public void buildCar(int p) begin
+        this.wheels = 4;
+        this.setPower(p);
+    end
+
+    public int getCarPower() begin
+        return this.power;
+    end
+end
+
+module Main begin
+    public void main() begin
+        mut Car myCar;
+        myCar.buildCar(500);
+        output myCar.getCarPower();
+    end
+end

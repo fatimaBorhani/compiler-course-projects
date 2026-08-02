@@ -1,0 +1,5 @@
+program [modules:2 structs:0]
+        module MutabilityTest [methods:1 fields:0]
+                method calculateNewValue (int -> int):public [statements:1]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:3]

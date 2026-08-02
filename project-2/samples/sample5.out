@@ -1,0 +1,5 @@
+program [modules:2 structs:0]
+        module Math [methods:1 fields:0]
+                method factorial (int -> int):public [statements:4]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:3]

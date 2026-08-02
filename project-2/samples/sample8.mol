@@ -1,0 +1,58 @@
+  module LoopTester begin
+    private int stepCounter;
+    public void reset() begin
+        this.stepCounter = 0;
+    end
+    public void runLoops() begin
+        this.reset();
+
+        mut int i;
+        mut int j;
+        mut int sum = 0;
+
+        for (i = 0, j = 4; i < 3; i = i + 1, j = j - 1) begin
+            output i;
+            output j;
+            sum = sum + (i * j);
+        end
+
+        output sum;
+        output this.stepCounter;
+    end
+end
+
+module Main includes LoopTester begin
+    public void main() begin
+        this.runLoops();
+    end
+end
+
+struct Point begin
+    public float x;
+    public float y;
+end
+
+module DataPacket begin
+    private int id;
+    private int payload;
+
+    public void init(int i, int p) begin
+        this.id = i;
+        this.payload = p;
+    end
+
+    public int getPayload() begin
+        return this.payload;
+    end
+
+    public void setPayload(int p) begin
+        this.payload = p;
+    end
+end
+
+module OwnershipTest begin
+    public DataPacket processPacket(mut DataPacket packet) begin
+        mut int currentVal;
+        currentVal = packet.getPayload();
+    end
+end

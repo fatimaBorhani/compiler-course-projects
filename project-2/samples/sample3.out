@@ -1,0 +1,8 @@
+program [modules:2 structs:0]
+        module Account [methods:3 fields:1]
+                field balance int:private
+                method Account (int -> void):public [statements:1]
+                method getBalance (void -> int):public [statements:1]
+                method deposit (int -> void):public [statements:1]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:5]

@@ -1,0 +1,18 @@
+program [modules:4 structs:1]
+        module LoopTester [methods:2 fields:1]
+                field stepCounter int:private
+                method reset (void -> void):public [statements:1]
+                method runLoops (void -> void):public [statements:7]
+        module Main [methods:1 fields:0]
+                method main (void -> void):public [statements:1]
+        struct Point [fields:2]
+                field x float:public
+                field y float:public
+        module DataPacket [methods:3 fields:2]
+                field id int:private
+                field payload int:private
+                method init (int*int -> void):public [statements:2]
+                method getPayload (void -> int):public [statements:1]
+                method setPayload (int -> void):public [statements:1]
+        module OwnershipTest [methods:1 fields:0]
+                method processPacket (DataPacket -> DataPacket):public [statements:2]

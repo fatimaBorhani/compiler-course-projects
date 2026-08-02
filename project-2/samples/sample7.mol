@@ -1,0 +1,46 @@
+struct Point begin
+    public float x;
+    public float y;
+end
+
+module MathUtils begin
+    public float multiply(float a, float b) begin
+        mut float res = a * b;
+        output res;
+        return res;
+    end
+
+    public bool isPositive(float val) begin
+        if (val > 0.0) begin
+            output true;
+            return true;
+        end
+        output false;
+        return false;
+    end
+end
+
+module Geometry includes MathUtils begin
+    public void processPoint() begin
+        mut Point(0.0, 0.0) p;
+        p.x = 2.0;
+        p.y = -3.5;
+
+        output p.x;
+        output p.y;
+        mut float area = this.multiply(p.x, 4.0);
+        mut bool check = this.isPositive(area);
+
+        if (p.y < 0.0) begin
+            output 0;
+        end else begin
+            output 1;
+        end
+    end
+end
+
+module Main includes Geometry begin
+    public void main() begin
+        this.processPoint();
+    end
+end

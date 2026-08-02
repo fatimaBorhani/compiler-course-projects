@@ -1,0 +1,9 @@
+module Main begin
+    void main() begin
+        mut int a = 10;
+        int b = 5;
+        a = a + b * 2;
+        output a;
+        output (a + b) * 2;
+    end
+ end
