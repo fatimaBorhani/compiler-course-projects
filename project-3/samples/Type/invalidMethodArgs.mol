@@ -1,0 +1,12 @@
+module Calculator begin
+    int add(int x, int y) begin
+        return x + y;
+    end
+end
+
+module Main includes Calculator begin
+    void main() begin
+        Calculator.add(5);
+        Calculator.add(5, 2.5);
+    end
+end

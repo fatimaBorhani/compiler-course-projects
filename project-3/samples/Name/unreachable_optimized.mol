@@ -1,0 +1,7 @@
+module Main begin
+    public void main() begin
+        mut int f;
+        f = 10;
+        output f;
+    end
+end

@@ -1,0 +1,8 @@
+module Main begin
+    void main() begin
+        int x = 10;
+        mut int y = 20;
+        y = 30;
+        x = 15;
+    end
+end

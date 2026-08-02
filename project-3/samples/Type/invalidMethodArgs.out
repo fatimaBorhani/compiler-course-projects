@@ -1,0 +1,2 @@
+Line 9 : Argument count mismatch for method add. Expected 2, got 1
+Line 10 : Argument type mismatch for method add, parameter 2. Expected int, got float

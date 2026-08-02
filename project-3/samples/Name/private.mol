@@ -1,0 +1,30 @@
+module Account begin
+    private int balance;
+    public int SetBalance(int newBalance) begin
+        this.balance = newBalance;
+    end
+    public int getBalance() begin
+        return this.balance;
+    end
+    public void deposit(int amount) begin
+        if (amount > 0) begin
+            this.balance = this.balance + amount;
+            output this.balance;
+        end
+    end
+end
+module Main begin
+    public void main() begin
+        mut Account myAccount;
+        myAccount.SetBalance(100);
+        mut int i = 1;
+        mut int aa = myAccount.balance;
+        output myAccount.getBalance();
+        while (i <= 3) begin
+            output i;
+            myAccount.deposit(i * 10);
+            i = i + 1;
+        end
+        output myAccount.getBalance();
+    end
+end

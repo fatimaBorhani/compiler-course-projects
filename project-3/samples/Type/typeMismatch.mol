@@ -1,0 +1,7 @@
+module Main begin
+    void main() begin
+        mut int a = 10;
+        float b = 3.14;
+        a = b;
+    end
+end

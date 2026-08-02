@@ -1,0 +1,8 @@
+module Main begin
+    void main() begin
+        int flag = 1;
+        if (flag) begin
+            int c = 2;
+        end
+    end
+end
